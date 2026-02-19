@@ -3,7 +3,7 @@ import PopularProducts from "./PopularProducts";
 // import SuperQuality from "./SuperQuality";
 // import Services from "./Services";
 // import SpecialOffer from "./SpecialOffer";
-import ReviewCard from "./ReviewCard";  
+// import Review from "./Review";  
 // import Subscribe from "./Subscribe";
 // import Footer from "./Footer";
 
@@ -13,7 +13,7 @@ export {
     // SuperQuality,
     // Services,
     // SpecialOffer,
-    ReviewCard,
+    // Review,
     // Subscribe,
     // Footer
 }
