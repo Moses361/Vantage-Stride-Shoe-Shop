@@ -3,7 +3,7 @@ import {
   // CustomerReviews,
   // Footer,
   Hero,
-  // PopularProducts,
+  PopularProducts,
   // Services,
   // SpecialOffer,
   // Subscribe,
@@ -14,11 +14,11 @@ const App = () => {
   return (
     <main className='relative'>
       <Nav />
-      <section className='xl:padding-l wide:padding-r padding-b'>
+     <section className='xl:padding-l wide:padding-r padding-b'>
         <Hero />
       </section>
       <section className='padding'>
-        {/* <PopularProducts /> */}
+        <PopularProducts />
       </section>
       {/* <section className='padding'>
         <SuperQuality />
