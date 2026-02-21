@@ -13,15 +13,15 @@ import {
 
 const App = () => {
   return (
-    <main className='relative'>
+    <main className='relative w-full overflow-x-hidden'>
       <Nav />
-     <section className='xl:padding-l wide:padding-r padding-b'>
+     <section className='xl:padding-l wide:padding-r padding-b overflow-x-hidden'>
         <Hero />
       </section>
-      <section className='padding'>
+      <section className='w-full overflow-x-hidden padding'>
         <PopularProducts />
       </section>
-      <section className='padding'>
+      <section className='w-full overflow-x-hidden padding'>
         <SuperQuality />
       </section>
       {/* <section className='padding-x py-10'>

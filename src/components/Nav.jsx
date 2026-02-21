@@ -7,7 +7,7 @@ const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-<header className="padding-x py-8 relative z-50 w-full bg-white">
+  <header className="padding-x py-8 relative z-50 w-full bg-white overflow-x-hidden">
         <nav className="flex justify-between items-center max-container">
         {/* Logo */}
         <a href="/">
