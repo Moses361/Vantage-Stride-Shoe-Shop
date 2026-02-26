@@ -1,40 +1,42 @@
 import { Nav } from "./components";
 import {
+  CustomerReviews,
+  Footer,
   Hero,
   PopularProducts,
-  SuperQuality,
   Services,
-  CustomerReviews,
+  SpecialOffer,
+  Subscribe,
+  SuperQuality,
 } from "./sections";
 
 const App = () => {
   return (
-    <main className="relative w-full overflow-x-hidden">
+    <main className='relative'>
       <Nav />
-
-      {/* Hero */}
-      <section className="w-full overflow-x-hidden xl:padding-l wide:padding-r padding-b">
+      <section className='xl:padding-l wide:padding-r padding-b'>
         <Hero />
       </section>
-
-      {/* Popular Products */}
-      <section className="w-full overflow-x-hidden padding">
+      <section className='padding'>
         <PopularProducts />
       </section>
-
-      {/* Super Quality */}
-      <section className="w-full overflow-x-hidden padding">
+      <section className='padding'>
         <SuperQuality />
       </section>
-
-      {/* Services */}
-      <section className="w-full overflow-x-hidden padding-x py-10">
+      <section className='padding-x py-10'>
         <Services />
       </section>
-
-      {/* Customer Reviews */}
-      <section className="w-full overflow-x-hidden bg-pale-blue padding">
+      <section className='padding'>
+        <SpecialOffer />
+      </section>
+      <section className='bg-pale-blue padding'>
         <CustomerReviews />
+      </section>
+      <section className='padding-x sm:py-32 py-16 w-full'>
+        <Subscribe />
+      </section>
+      <section className=' bg-black padding-x padding-t pb-8'>
+        <Footer />
       </section>
     </main>
   );

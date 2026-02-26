@@ -1,24 +1,29 @@
-import { reviews } from "../constants";
-import { ReviewCard } from "../components";
+import { star } from "../assets/icons";
 
-const CustomerReviews = () => {
+const ReviewCard = ({ imgURL, customerName, rating, feedback }) => {
   return (
-    <section className="max-container">
-      <h3 className="font-palanquin text-center text-4xl font-bold">
-        What Our <span className="text-coral-red">Customers</span> Say
-      </h3>
-
-      <p className="m-auto mt-4 max-w-lg text-center info-text">
-        Hear genuine stories from our satisfied customers.
-      </p>
-
-      <div className="mt-16 flex flex-wrap justify-center gap-14">
-        {reviews.map((review, index) => (
-          <ReviewCard key={index} {...review} />
-        ))}
+    <div className='flex justify-center items-center flex-col'>
+      <img
+        src={imgURL}
+        alt='customer'
+        className='rounded-full object-cover w-[120px] h-[120px]'
+      />
+      <p className='mt-6 max-w-sm text-center info-text'>{feedback}</p>
+      <div className='mt-3 flex justify-center items-center gap-2.5'>
+        <img
+          src={star}
+          width={24}
+          height={24}
+          alt='rating star'
+          className='object-contain m-0'
+        />
+        <p className='text-xl font-montserrat text-slate-gray'>({rating})</p>
       </div>
-    </section>
+      <h3 className='mt-1 font-palanquin text-3xl text-center font-bold'>
+        {customerName}
+      </h3>
+    </div>
   );
 };
 
-export default CustomerReviews;
+export default ReviewCard;
