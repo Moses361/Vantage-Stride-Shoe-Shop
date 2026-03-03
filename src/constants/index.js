@@ -6,10 +6,7 @@ import {
     bigShoe3,
     customer1,
     customer2,
-    shoe4,
-    shoe5,
-    shoe6,
-    shoe7,
+    
 
     // ✅ ADD THESE AFTER YOU DOWNLOAD THE IMAGES
     shoe8,
@@ -42,9 +39,18 @@ export const navLinks = [
 ];
 
 export const shoes = [
-    { thumbnail: thumbnailShoe1, bigShoe: bigShoe1 },
-    { thumbnail: thumbnailShoe2, bigShoe: bigShoe2 },
-    { thumbnail: thumbnailShoe3, bigShoe: bigShoe3 },
+    {
+        thumbnail: thumbnailShoe1,
+        bigShoe: bigShoe1,
+    },
+    {
+        thumbnail: thumbnailShoe2,
+        bigShoe: bigShoe2,
+    },
+    {
+        thumbnail: thumbnailShoe3,
+        bigShoe: bigShoe3,
+    },
 ];
 
 export const statistics = [
