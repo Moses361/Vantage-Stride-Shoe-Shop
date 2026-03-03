@@ -14,7 +14,24 @@ import shoe4 from './shoe4.svg'
 import shoe5 from './shoe5.svg'
 import shoe6 from './shoe6.svg'
 import shoe7 from './shoe7.svg'
-import shoe8 from './shoe8.svg'
+
+// ✅ NEW IMAGES (after renaming
+import shoe8 from './shoe8.png'
+import shoe9 from './shoe9.png'
+import shoe10 from './shoe10.png'
+import shoe11 from './shoe11.png'
+import shoe12 from './shoe12.png'
+import shoe13 from './shoe13.png'
+import shoe14 from './shoe14.png'
+import shoe15 from './shoe15.png'
+import shoe16 from './shoe16.png'
+import shoe17 from './shoe17.png'
+import shoe18 from './shoe18.png'
+import shoe19 from './shoe19.png'
+import shoe20 from './shoe20.png'
+import shoe21 from './shoe21.png'
+import shoe22 from './shoe22.png'
+import shoe23 from './shoe23.png'
 
 import thumbnailBackground from './thumbnail-background.svg'
 import thumbnailShoe1 from './thumbnail-shoe1.svg'
@@ -37,7 +54,24 @@ export {
     shoe5,
     shoe6,
     shoe7,
+
+    // ✅ Export new ones
     shoe8,
+    shoe9,
+    shoe10,
+    shoe11,
+    shoe12,
+    shoe13,
+    shoe14,
+    shoe15,
+    shoe16,
+    shoe17,
+    shoe18,
+    shoe19,
+    shoe20,
+    shoe21,
+    shoe22,
+    shoe23,
 
     thumbnailBackground,
     thumbnailShoe1,
