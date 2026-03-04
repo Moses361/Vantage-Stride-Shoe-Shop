@@ -29,18 +29,21 @@ const ContactUs = () => {
   return (
     <section id="contact-us" className="w-full">
       <form onSubmit={handleSubmit} className="flex flex-col gap-5 p-6 border border-slate-gray rounded-[20px] bg-white">
-        <h3 className="text-xl font-bold font-palanquin">Inquire to Buy</h3>
+        <h3 className="text-4xl font-palanquin font-bold">
+          Contact Us to <span className="text-coral-red">Buy Shoes</span>
+        </h3>
         
         <input required type="text" placeholder="Full Name" className="input border-b pb-2 outline-none" />
         <input required type="email" placeholder="Email Address" className="input border-b pb-2 outline-none" />
         <textarea 
-          required
+          required 
           placeholder="Size and shipping address..." 
           className="input border-b pb-2 outline-none h-20 resize-none"
         ></textarea>
         
         <div className="w-full">
-          <Button label="Contact Us for to Buy Shoes" fullWidth />
+          {/* FIXED TEXT HERE */}
+          <Button label="Contact Us to Buy Shoes" fullWidth />
         </div>
       </form>
     </section>
