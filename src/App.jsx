@@ -1,5 +1,6 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useParams } from "react-router-dom"; // Added useParams
 import { Nav } from "./components";
+import { products } from "./constants"; // Ensure this import is here
 import {
   CustomerReviews,
   Footer,
@@ -7,7 +8,7 @@ import {
   PopularProducts,
   Services,
   SpecialOffer,
-  Subscribe,
+  ContactUs,
   SuperQuality,
 } from "./sections";
 
@@ -32,7 +33,7 @@ const Home = () => (
       <CustomerReviews />
     </section>
     <section className="padding-x sm:py-32 py-16 w-full">
-      <Subscribe />
+      <ContactUs />
     </section>
   </>
 );
@@ -51,29 +52,48 @@ const Products = () => (
 
 const Contact = () => (
   <section className="padding pt-16 sm:pt-28">
-    <Subscribe />
+    <ContactUs />
   </section>
 );
 
-const Details = () => (
-  <section className="padding pt-16 sm:pt-28 flex flex-col items-center">
-    <h1 className="text-4xl font-bold font-palanquin mb-6">
-      Shoe Details
-    </h1>
+// UPDATED: Dynamic Details Component
+const Details = () => {
+  const { slug } = useParams();
+  
+  const shoe = products.find(
+    (p) => p.name.replace(/\s+/g, "-").toLowerCase() === slug
+  );
 
-    <p className="text-slate-gray font-montserrat text-center max-w-md mb-8">
-      Experience premium Nike comfort and elite performance built for
-      everyday excellence.
-    </p>
+  if (!shoe) return <div className="p-20 text-center font-bold">Shoe not found!</div>;
 
-    <a
-      href="/contact"
-      className="bg-coral-red text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
-    >
-      Contact Us To Buy Shoes
-    </a>
-  </section>
-);
+  return (
+    <section className="padding pt-32 flex flex-col items-center min-h-screen">
+      <div className="flex max-lg:flex-col items-start gap-10 max-container">
+        <div className="flex-1">
+          <img 
+            src={shoe.imgURL} 
+            alt={shoe.name} 
+            className="w-full max-w-[500px] aspect-square object-cover rounded-3xl shadow-2xl" 
+          />
+        </div>
+        
+        <div className="flex-1 flex flex-col">
+          <h1 className="text-4xl font-bold font-palanquin">{shoe.name}</h1>
+          <p className="text-2xl text-coral-red font-montserrat font-semibold mt-4">
+            {shoe.price}
+          </p>
+          <p className="text-slate-gray font-montserrat mt-6 leading-7">
+            Experience premium comfort and elite performance built for everyday excellence.
+          </p>
+          
+          <div className="mt-10">
+             <ContactUs />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const App = () => {
   return (
@@ -85,7 +105,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/details" element={<Details />} />
+        {/* UPDATED: Dynamic path with :slug */}
+        <Route path="/details/:slug" element={<Details />} />
       </Routes>
 
       <section className="bg-black padding-x padding-t pb-8">

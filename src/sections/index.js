@@ -4,7 +4,7 @@ import SuperQuality from "./SuperQuality";
 import Services from "./Services";
 import SpecialOffer from "./SpecialOffer";
 import CustomerReviews from "./CustomerReviews";
-import Subscribe from "./Subscribe";
+import ContactUs from "./ContactUs";
 import Footer from "./Footer";
 
 export {
@@ -14,6 +14,6 @@ export {
     Services,
     SpecialOffer,
     CustomerReviews,
-    Subscribe,
-    Footer
+    ContactUs,
+    Footer,
 }
