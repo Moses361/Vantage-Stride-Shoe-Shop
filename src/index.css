@@ -62,3 +62,7 @@
     @apply font-montserrat text-lg text-slate-gray hover:text-black cursor-pointer;
   }
 }
+
+html, body {
+  overflow-x: hidden;
+}
