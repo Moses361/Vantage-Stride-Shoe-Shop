@@ -14,7 +14,7 @@ const Nav = () => {
       <nav className="flex justify-between items-center max-container w-full relative">
 
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2" onClick={closeMenu}>
+        <Link to="/" className="flex items-center gap-2 z-50" onClick={closeMenu}>
           <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-coral-red flex justify-center items-center bg-black">
             <img
               src={vantageLogo}
@@ -80,21 +80,20 @@ const Nav = () => {
         </div>
 
 
-        {/* Hamburger Button */}
+        {/* Hamburger Button - Added z-50 to keep it on top */}
         <button
-          className="lg:hidden"
+          className="lg:hidden z-50 relative"
           onClick={toggleMenu}
         >
           {isOpen ? (
-
             /* X Icon */
             <svg
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="w-7 h-7"
+              className="w-8 h-8"
             >
               <path
                 strokeLinecap="round"
@@ -102,40 +101,37 @@ const Nav = () => {
                 d="M6 18L18 6M6 6l12 12"
               />
             </svg>
-
           ) : (
-
             <img src={hamburger} alt="menu" width={25} height={25} />
-
           )}
         </button>
 
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Updated to Fixed Full Screen */}
         {isOpen && (
-          <div className="absolute top-[70px] left-0 w-full bg-white shadow-xl border-t lg:hidden z-50">
-            <ul className="flex flex-col items-center gap-8 py-10 font-montserrat text-xl">
+          <div className="fixed inset-0 w-full h-screen bg-white lg:hidden z-40 flex flex-col justify-center items-center animate-in fade-in zoom-in duration-300">
+            <ul className="flex flex-col items-center gap-10 font-montserrat text-2xl font-bold">
 
               <li onClick={closeMenu}>
-                <Link to="/">Home</Link>
+                <Link to="/" className="hover:text-coral-red transition">Home</Link>
               </li>
 
               <li onClick={closeMenu}>
-                <Link to="/about">About Us</Link>
+                <Link to="/about" className="hover:text-coral-red transition">About Us</Link>
               </li>
 
               <li onClick={closeMenu}>
-                <Link to="/products">Products</Link>
+                <Link to="/products" className="hover:text-coral-red transition">Products</Link>
               </li>
 
               <li onClick={closeMenu}>
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/contact" className="hover:text-coral-red transition">Contact Us</Link>
               </li>
 
-              <li onClick={closeMenu}>
+              <li onClick={closeMenu} className="mt-4">
                 <Link
                   to="/products"
-                  className="bg-coral-red text-white px-10 py-3 rounded-full"
+                  className="bg-coral-red text-white px-12 py-4 rounded-full shadow-xl active:scale-95 transition"
                 >
                   Shop Now
                 </Link>
